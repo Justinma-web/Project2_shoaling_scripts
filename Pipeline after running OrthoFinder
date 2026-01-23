@@ -7,6 +7,32 @@
 ## Source: https://github.com/davidemms/OrthoFinder/issues/154
 ## E.g. for the example dataset I used the excel commands =COUNTIF(B3,">0"), =SUM(G2:J2) and =K2=4 as shown here: Orthogroups.GeneCount.xlsx
 
-## 1.2 Filtered Ortho files - Idea: 
+## 1.2 Filtered Ortho files - Idea: asking...
 
 #### Step 2: 
+
+
+
+### Assessment
+# Mado de novo path: /home/justinma/CS_RNAseq/kraken/M_runDrap/e-rmbt_editing/all_contigs.second_pass.fa
+# Abu de novo path: /home/justinma/CS_RNAseq/kraken/Abu_runDrap/e-rmbt_editing/all_contigs.second_pass.fa
+
+## Assess de novo assembly
+busco \
+    -f \
+    -i /home/justinma/CS_RNAseq/kraken/M_runDrap/e-rmbt_editing/all_contigs.second_pass.fa \
+    -o busco_M \
+    -m tran \
+    --out_path /home/justinma/shoaling_analysis/busco \
+    -l actinopterygii_odb12 \
+    -c 13
+
+busco \
+    -f \
+    -i /home/justinma/CS_RNAseq/kraken/Abu_runDrap/e-rmbt_editing/all_contigs.second_pass.fa \
+    -o busco_Abu \
+    -m tran \
+    --out_path /home/justinma/shoaling_analysis/busco \
+    -l actinopterygii_odb12 \
+    -c 13
+
