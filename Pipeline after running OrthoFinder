@@ -3,6 +3,8 @@
 #### Start with: /Result/Orthogroup_Sequences
 
 #### Step 1: Filtered Orthogroups to contain at least one transcript for each species 
+## Idea: filter it here: /ResultOrthogroups/Orthogroups.GeneCount.tsv
+## Source: https://github.com/davidemms/OrthoFinder/issues/154
 
 
 
