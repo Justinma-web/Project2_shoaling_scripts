@@ -3,9 +3,10 @@
 #### Start with: /Result/Orthogroup_Sequences
 
 #### Step 1: Filtered Orthogroups to contain at least one transcript for each species 
-## Idea: filter it here: /ResultOrthogroups/Orthogroups.GeneCount.tsv
+## 1.1 Filtered Ortho IDs - Idea: filter it here: /ResultOrthogroups/Orthogroups.GeneCount.tsv
 ## Source: https://github.com/davidemms/OrthoFinder/issues/154
+## E.g. for the example dataset I used the excel commands =COUNTIF(B3,">0"), =SUM(G2:J2) and =K2=4 as shown here: Orthogroups.GeneCount.xlsx
 
-
+## 1.2 Filtered Ortho files - Idea: 
 
 #### Step 2: 
