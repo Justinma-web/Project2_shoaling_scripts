@@ -61,4 +61,37 @@ diamond blastp \
     --evalue 1e-5 \
     --outfmt 6
 
+#### Quant
+
+# Salmon - Index
+cat M_pep.fasta Abu_pep.fasta > all_pep.fasta
+salmon index --threads 14 --index cluster_index --transcripts all_pep.fasta
+
+# Salmon - Quantification
+mkdir -p quant_result
+
+# 遍历所有 *_1.fq.gz 文件
+for R1 in /home/justinma/CS_RNAseq/kraken/*_1.fq.gz
+do
+    # 找到对应的 R2 文件
+    R2=${R1/_1.fq.gz/_2.fq.gz}
+
+    # 样本名：去掉路径和后缀
+    samp=$(basename "$R1" _1.fq.gz)
+
+    echo "Processing sample ${samp}"
+
+    salmon quant -i cluster_index -l A \
+        --gcBias \
+        -1 "$R1" \
+        -2 "$R2" \
+        -p 14 --validateMappings \
+        -o quant_result/${samp}_quant
+done
+
+
+
+
+
+
 
